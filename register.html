@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/responsive_nav.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/V_logo.ico" type="image/x-icon">
+    <title>Grand Theft Auto V | Register</title>
+</head>
+<body>
+    <header>
+        <span onclick="responsiveNav()">☰</span>
+        <nav>
+            <ul>
+                <li><a href="#"><span>Accueil</span></a></li>
+                <li><a href="index.html"><span>Histoire</span></a></li>
+                <li><a href="online.html"><span>Online</span></a></li>
+                <li><a href="stats.html"><span>Stats</span></a></li>
+                <li><a href="register.html"><span>Inscription</span></a></li>
+                <li><a href="login.html"><span>Connexion</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div data-aos="zoom-in">
+            <h1>Register<img src="img/V_logo.png" alt="LogoV"></h1>
+            <form action="https://www.w3schools.com/action_page.php" method="post">
+                <ul>
+                    <li>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom">
+                    </li>
+                    <li>
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom">
+                    </li>
+                    <li>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email">
+                    </li>
+                    <li>
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password">
+                    </li>
+                    <li>
+                        <label for="nombre">Nombre préféré :</label>
+                        <input type="number" id="nombre" name="nombre">
+                    </li>
+                    <li>
+                        <label for="date">Date de naissance :</label>
+                        <input type="date" id="date" name="date">
+                    </li>
+                    <li>
+                        <label for="liste">Language de programmation préféré :</label>
+                        <select id="liste" name="liste">
+                            <option value="option1">Python</option>
+                            <option value="option2">EcmaScript</option>
+                            <option value="option3">Java</option>
+                            <option value="option3">Rust</option>
+                            <option value="option3">C#</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="color">Couleur préférée :</label>
+                        <input type="color" id="color" name="color">
+                    </li>
+                    <li>
+                        <label for="age">Age : <span id="age_label"></span></label>
+                        <input type="range" min="1" max="122" value="0"  id="age">
+                    </li>
+                    <li>
+                        <label for="textarea">Commentaires :</label>
+                        <textarea id="commentaire" name="textarea"></textarea>
+                    </li>
+                    <li>
+                        <label for="textarea">Adresse :</label>
+                        <input type="adresse" id="texte" name="adresse">
+                    </li>
+                    <li>
+                        <label for="tel">Numéro de téléphone :</label>
+                        <input type="tel" id="tel" name="tel">
+                    </li>
+                    <li>
+                        <label for="url">Site Web :</label>
+                        <input type="url" id="url" name="url">
+                    </li>
+                    <li>
+                        <label for="file">Sélectionnez un fichier :</label>
+                        <input type="file" id="file" name="file">
+                    </li>
+                    <li>
+                        <label for="radio">Sexe :</label>
+                        <input type="radio" id="homme" name="sexe" value="homme">
+                        <label for="homme">Homme</label>
+                        <input type="radio" id="femme" name="sexe" value="femme">
+                        <label for="femme">Femme</label>
+                    </li>
+                    <li>
+                        <label for="select">Pays :</label>
+                        <select id="select" name="pays">
+                            <option value="france">France</option>
+                            <option value="usa">USA</option>
+                            <option value="japan">Japon</option>
+                            <option value="germany">Allemagne</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="checkbox">Langues parlées :</label>
+                        <input type="checkbox" id="fr" name="langue" value="fr">
+                        <label for="fr">Français</label>
+                        <input type="checkbox" id="en" name="langue" value="en">
+                        <label for="en">Anglais</label>
+                        <input type="checkbox" id="es" name="langue" value="es">
+                        <label for="es">Espagnol</label>
+                    </li>
+                    <input type="submit" value="Envoyer">
+                </ul>
+            </form>
+        </div>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script/age_input.js"></script>
+</body>
+</html>

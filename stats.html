@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/responsive_nav.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="script/show_graph.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="img/V_logo.ico" type="image/x-icon">
+    <title>Grand Theft Auto V | Login</title>
+</head>
+<body>
+    <header>
+        <span onclick="responsiveNav()">☰</span>
+        <nav>
+            <ul>
+                <li><a href="#"><span>Accueil</span></a></li>
+                <li><a href="index.html"><span>Histoire</span></a></li>
+                <li><a href="online.html"><span>Online</span></a></li>
+                <li><a href="stats.html"><span>Stats</span></a></li>
+                <li><a href="register.html"><span>Inscription</span></a></li>
+                <li><a href="login.html"><span>Connexion</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div data-aos="zoom-in">
+          <h2>Statistiques des Joueurs connectés en 2024 sur Grand Theft Auto V</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Concurrent Players</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Janvier</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Février</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Mars</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Avril</td>
+                <td>364,544</td>
+              </tr>
+              <tr>
+                <td>Mai</td>
+                <td>216,918</td>
+              </tr>
+              <tr>
+                <td>Juin</td>
+                <td>85,285</td>
+              </tr>
+              <tr>
+                <td>Juillet</td>
+                <td>61,068</td>
+              </tr>
+              <tr>
+                <td>Aout</td>
+                <td>50,764</td>
+              </tr>
+              <tr>
+                <td>Septembre</td>
+                <td>47,429</td>
+              </tr>
+              <tr>
+                <td>Octobre</td>
+                <td>73,795</td>
+              </tr>
+              <tr>
+                <td>Novembre</td>
+                <td>76,970</td>
+              </tr>
+              <tr>
+                <td>Décembre</td>
+                <td>84,583</td>
+              </tr>
+            </tbody>
+          </table>
+          <canvas id="chart"></canvas>
+          <script>
+              var ctx = document.getElementById('chart').getContext('2d');
+              var myChart = new Chart(ctx, {
+                  type: 'line',
+                  data: {
+                      labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+                      datasets: [{
+                          label: 'Concurrent Players',
+                          data: [0, 0, 0, 364544, 216918, 85285, 61068, 50764, 47429, 73795, 76970, 84583],
+                          backgroundColor: 'rgba(75, 192, 192, 0.2)', // couleur de fond
+                          borderColor: 'rgba(75, 192, 192, 1)', // couleur de la ligne
+                          borderWidth: 2
+                      }]
+                  },
+                  options: {
+                      scales: {
+                          y: {
+                              beginAtZero: true,
+                              ticks: {
+                                  color: 'black', // couleur du texte de l'axe y
+                                  font: {
+                                      size: 14 // taille du texte de l'axe y
+                                  }
+                              }
+                          },
+                          x: {
+                              ticks: {
+                                  color: 'black', // couleur du texte de l'axe x
+                                  font: {
+                                      size: 14 // taille du texte de l'axe x
+                                  }
+                              }
+                          }
+                      },
+                      plugins: {
+                          legend: {
+                              labels: {
+                                  color: 'black', // couleur du texte de la légende
+                                  font: {
+                                      size: 16 // taille du texte de la légende
+                                  }
+                              }
+                          }
+                      },
+                      responsive: true // désactive la possibilité de redimensionner le graphique
+                  }
+              });
+          </script>          
+        </div>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

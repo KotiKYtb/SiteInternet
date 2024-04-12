@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/responsive_nav.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/V_logo.ico" type="image/x-icon">
+    <title>Grand Theft Auto V | Login</title>
+</head>
+<body>
+    <header>
+        <span onclick="responsiveNav()">☰</span>
+        <nav>
+            <ul>
+                <li><a href="#"><span>Accueil</span></a></li>
+                <li><a href="index.html"><span>Histoire</span></a></li>
+                <li><a href="online.html"><span>Online</span></a></li>
+                <li><a href="stats.html"><span>Stats</span></a></li>
+                <li><a href="register.html"><span>Inscription</span></a></li>
+                <li><a href="login.html"><span>Connexion</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div data-aos="zoom-in">
+            <h1>Login<img src="img/V_logo.png" alt="LogoV"></h1>
+            <form action="https://www.w3schools.com/action_page.php" method="post">
+                <ul>
+                    <li>
+                        <label for="texte">Prénom :</label>
+                        <input type="text" id="texte" name="texte">
+                    </li>
+                    <li>
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password">
+                    </li>
+                    <input type="submit" value="Envoyer">
+                </ul>
+            </form>
+        </div>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

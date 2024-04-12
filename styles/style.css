@@ -1,0 +1,453 @@
+@font-face {
+  font-family: 'GrandTheftAutoV';
+  src: url('../font/pricedown.ttf');
+}
+
+* {
+scroll-behavior: smooth;
+scroll-margin-top: 100px;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Arial', sans-serif;
+background-color: rgb(90, 90, 90);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 61, 61); 
+  border-radius: 10px;
+}
+
+body > div {
+  animation:slide 60s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(126, 126, 126) 50%, rgb(68, 75, 80) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+body > div:nth-child(2) {
+  animation-direction:alternate-reverse;
+  animation-duration:15s;
+}
+
+body > div:nth-child(3) {
+  animation-duration:25s;
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+/* ----------------------------------------------------- */
+
+header {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;  
+  text-align: center;
+  font-family: 'GrandTheftAutoV', sans-serif;
+  transition: background-color 0.1s ease-in-out;
+  z-index: 10;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  transform: skew(-25deg);
+  justify-content: center;
+}
+
+nav ul li {
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  margin-inline: 1%;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul li:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+nav ul li:last-child {
+  border-radius: 0 7px 7px 0;
+}
+
+nav ul > li a {
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+  padding: 0.5em 1em;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+nav ul > li:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 1);
+  transition: 0.2s;
+}
+
+header > span {
+  display: none;
+  cursor: default;
+}
+
+/* ----------------------------------------------------- */
+
+body > main > div {
+  background-image: url('../img/bg.png');
+  background-size: cover;
+  position: static;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 20px 5px rgb(0, 0, 0);
+}
+
+body > main > div h1 {
+  font-family: 'GrandTheftAutoV', sans-serif;
+  font-size:7vw;
+  font-weight: lighter;
+  margin: 0;
+  z-index: 1;
+  text-shadow: #FFF 0px 0px 1px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+
+body > main > div img {
+  width: 2em;
+  transform: translateY(30%);
+  filter: drop-shadow(5px 5px 5px rgba(255, 0, 111, 0.5));
+
+}
+
+main > section {
+  margin: auto;
+  margin-top: 5%;
+  width: 80%;
+}
+
+main > section p {
+  margin-left: 3%;
+  line-height: 30px;
+}
+
+/* ----------------------------------------------------- */
+
+#veh {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: 2%;
+}
+
+#veh article {
+max-width: 250px;
+flex: 1 0 250px;
+background-color: rgb(110, 110, 110);
+padding: 10px;
+margin: 10px;
+text-align: center;
+box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+}
+
+#veh article img {
+max-width: 100%;
+height: auto;
+transition: 0.5s;
+}
+
+#veh article span {
+display: block;
+font-weight: bold;
+margin-top: 10px;
+transition: 0.5s;
+}
+
+
+#veh article:hover img {
+transform: scale(1.07);
+transition: 0.5s ease;
+}
+
+#veh article:hover span {
+filter: blur(5px);
+transition: 0.5s ease;
+}
+
+#veh > article > span {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+transition: 0.5s;
+}
+
+/* ----------------------------------------------------- */
+
+form {
+  width: 30%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding:0 20px;
+  margin: 10px 0 50px 0;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+form > ul {
+  list-style: none;
+  padding: 0;
+}
+
+form > ul >li {
+  margin-bottom: 10px;
+}
+
+form > ul > li > label {
+  font-weight: bold;
+  font-size: 100%;
+}
+
+form > ul > li > input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="file"], input[type="date"], input[type="color"], select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 1%;
+  box-sizing: border-box;
+  border: 1px solid #cccccc1c;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+form > ul > li > input[type="color"] {
+  width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+form > ul > li > textarea {
+  resize: vertical;
+}
+
+form > ul > li > input[type="range"] {
+  width: 100%;
+}
+
+form > ul > input {
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  margin-inline: 1%;
+  text-transform: uppercase;
+  color: #555;
+  transition: all 1s ease-in-out;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
+  transform: skew(-25deg);
+  border-radius: 7px;
+  margin: auto;
+}
+
+form > ul > input:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 1);
+  transition: 0.2s;
+}
+
+/* ----------------------------------------------------- */
+
+body > main > div > h2 {
+  margin-top: 15%;
+  font-size: 1.5vw;
+}
+
+table {
+  display: table;
+  width: 50%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  font-size: 1vw;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1%;
+  text-align: left;
+}
+
+thead th {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2vw;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td:last-child {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: 0.2s;
+}
+
+#chart {
+  width: 50%;
+  max-width: 50%;
+  max-height: 400px;
+  margin: 2% 0 5% 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ----------------------------------------------------- */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(51, 51, 51);
+  color: #fff;
+  padding: 20px;
+  margin-top: 50px;
+  box-shadow: 0px 20px 20px 25px rgba(0, 0, 0, 1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1vw;
+  transition: 0.2s;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer ul li {
+  margin-left: 20px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1vw;
+  transition: 0.2s;
+}
+
+footer ul li a:hover,
+footer p:hover {
+  color: #dd73a8;
+  transition: 0.2s;
+}
+
+@media screen and (min-width: 550px) {
+  header nav > ul {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header > span {
+    background: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    left: 0;
+    margin: 4%;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 2vw;
+    padding: 0.5em 1em;
+    display: inline-block;
+    transition: 0.5s;
+    transform: skew(-25deg);
+    border-radius: 7px;
+  }
+  
+  header > span:hover {
+    transform: translateY(0px);
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.2s;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    transform: skew(0deg);
+    margin-left:5%;
+  }
+
+  nav ul li:first-child, 
+  nav ul li:last-child {
+    border-radius: 4px;
+  }
+
+  nav ul li {
+    transform: skew(-25deg);
+    border-radius: 4px;
+    margin-top: 5%;
+  }
+
+  header nav > ul {
+    display: none;
+  }
+}
